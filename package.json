@@ -1,26 +1,44 @@
 {
-  "name": "react-popup",
+  "name": "@jjunyjjuny/react-popup",
+  "description": "popup wrapper component for react",
   "version": "0.1.0",
-  "private": true,
+  "module": "dist/Popup.js",
+  "main": "dist/Popup.js",
+  "keywords": [
+    "react",
+    "popup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjunyjjuny/react-popup"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.10.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "babeling": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
